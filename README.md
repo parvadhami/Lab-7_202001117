@@ -2,7 +2,7 @@
 
 # Name - Parva Dhami
 
-# Section A
+# Group 15
 
 1. Enlist which set of test cases have been identified using Equivalence Partitioning and Boundary Value
 Analysis separately.
@@ -236,11 +236,11 @@ public class LinearSearchTest {
       <td>0</td>
     </tr>
     <tr>
-      <td>Test with v as a non-existent value and a non-empty array a[]</td>
+      <td>Test with v as an existent value and an empty array a[]</td>
       <td>0</td>
     </tr>
     <tr>
-      <td>Test with v as an existent value and an empty array a[]</td>
+      <td>Test with v as a non-existent value and a non-empty array a[]</td>
       <td>0</td>
     </tr>
     <tr>
@@ -300,7 +300,8 @@ public class LinearSearchTest {
 </table>
 </br>
 
-### Problem 3 :
+### P3: The function binarySearch searches for a value v in an ordered array of integers a. If v appears in
+the array a, then the function returns an index i, such that a[i] == v; otherwise, -1 is returned.
 
 ### Equivalence Partitioning:
 
@@ -361,7 +362,10 @@ public class LinearSearchTest {
 </table>
 </br>
 
-### Problem 4 :
+### P4: The following problem has been adapted from The Art of Software Testing, by G. Myers (1979). The
+function triangle takes three integer parameters that are interpreted as the lengths of the sides of a
+triangle. It returns whether the triangle is equilateral (three lengths equal), isosceles (two lengths equal),
+scalene (no lengths equal), or invalid (impossible lengths).
 
 ### Boundary Value Analysis:
 
@@ -375,15 +379,11 @@ public class LinearSearchTest {
     <td>INVALID</td>
   </tr>
   <tr>
-    <td>Invalid inputs: a + b = c or b + c = a or c + a = b (a=3, b=4, c=8)</td>
+    <td>Invalid inputs: a + b = c or b + c = a or c + a = b (a=5, b=4, c=11)</td>
     <td>INVALID</td>
   </tr>
   <tr>
-    <td>Equilateral triangles: a = b = c = 1</td>
-    <td>EQUILATERAL</td>
-  </tr>
-  <tr>
-    <td>Equilateral triangles: a = b = c = 100</td>
+    <td>Equilateral triangles: a = b = c = 9</td>
     <td>EQUILATERAL</td>
   </tr>
   <tr>
@@ -391,11 +391,11 @@ public class LinearSearchTest {
     <td>ISOSCELES</td>
   </tr>
   <tr>
-    <td>Isosceles triangles: a ≠ b = c = 10</td>
+    <td>Isosceles triangles: a ≠ b = c = 8</td>
     <td>ISOSCELES</td>
   </tr>
   <tr>
-    <td>Isosceles triangles: a = c ≠ b = 10</td>
+    <td>Isosceles triangles: a = c ≠ b = 23</td>
     <td>ISOSCELES</td>
   </tr>
   <tr>
@@ -474,7 +474,8 @@ public class LinearSearchTest {
 </table>
 </br>
 
-### Problem 5 :
+### P5: The function prefix (String s1, String s2) returns whether or not the string s1 is a prefix
+of string s2 (you may assume that neither s1 nor s2 is null).
 
 ### Equivalence Partitioning:
 <table>
@@ -531,11 +532,11 @@ public class LinearSearchTest {
     <td>True</td>
   </tr>
   <tr>
-    <td>s1 = "a", s2 = "b"</td>
+    <td>s1 = "b", s2 = "c"</td>
     <td>False</td>
   </tr>
   <tr>
-    <td>s1 = "a", s2 = "a"</td>
+    <td>s1 = " ", s2 = " "</td>
     <td>True</td>
   </tr>
   <tr>
@@ -549,7 +550,11 @@ public class LinearSearchTest {
 </table>
 </br>
 
-### Problem 6 :
+### P6: Consider again the triangle classification program (P4) with a slightly different specification: The program
+reads floating values from the standard input. The three values A, B, and C are interpreted as
+representing the lengths of the sides of a triangle. The program then prints a message to the standard output
+that states whether the triangle, if it can be formed, is scalene, isosceles, equilateral, or right angled.
+Determine the following for the above program:
 
 (a) Equivalence Classes:
 
@@ -559,20 +564,12 @@ public class LinearSearchTest {
     <th>Expected Outcome</th>
   </tr>
   <tr>
-    <td>a = -1, b = 2, c = 3</td>
+    <td>a = 0, b = 2, c = 3</td>
     <td>Invalid input</td>
   </tr>
   <tr>
-    <td>a = 1, b = 1, c = 1</td>
-    <td>Equilateral triangle</td>
-  </tr>
-  <tr>
-    <td>a = 2, b = 2, c = 3</td>
-    <td>Isosceles triangle</td>
-  </tr>
-  <tr>
     <td>a = 3, b = 4, c = 5</td>
-    <td>Scalene right angled triangle</td>
+    <td>Scalene Right angled triangle</td>
   </tr>
   <tr>
     <td>a = 3, b = 5, c = 4</td>
@@ -580,10 +577,13 @@ public class LinearSearchTest {
   </tr>
   <tr>
     <td>a = 5, b = 3, c = 4</td>
-    <td>Scalene right angled triangle</td>
+    <td>Scalene
+  <tr>
+    <td>a = 2, b = 2, c = 3</td>
+    <td>Isosceles triangle</td>
   </tr>
   <tr>
-    <td>a = 3, b = 4, c = 6</td>
+    <td>a = 3, b = 4, c = 9</td>
     <td>Not a triangle</td>
   </tr>
 </table>
